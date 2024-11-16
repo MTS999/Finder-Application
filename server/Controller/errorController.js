@@ -64,7 +64,7 @@ export const globalErrorHandler = (error, req, res, next) => {
 
   if (process.env.NODE_ENV === "development") {
     devErrors(res, error);
-  } else if (process.env.NODE_ENV === "production") {
+  } else if (process.env.NODE_ENV === "production")  {
     console.log(error);
     if (error.name === "CastError") {
       error = castErrorHandler(error);
